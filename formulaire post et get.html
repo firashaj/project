@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Formulaire</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  </head>
+
+  <body>
+    <h1>Mon premier formulaire !</h1>
+
+    <form action="resultat2.php" method="get">
+      <p>Prénom : <input type="text" name="prenom" size="30" /></p>
+      <p>Age : <input type="number" min="18" max="60" step="2" value="20" /></p>
+      <p>Date de naissance : <input type="date" name="datenaiss" /></p>
+      <p>
+        Numéro de tel : <input type="tel" name="numtel" pattern="[0-9]{8}" />
+      </p>
+
+      <p>
+        Email * :
+        <input
+          type="email"
+          name="email"
+          placeholder="adresse email valide"
+          required
+          autofocus
+        />
+      </p>
+      <p>Site web : <input type="url" name="site" /></p>
+
+      <p>Semaine de vacances : <input type="week" name="sem" /></p>
+      <p>Heure d'arrivée : <input type="time" name="heure" /></p>
+
+      <p>Couleur Favorite:<input type="color" name="Favcolor" /></p>
+
+      <p>
+        Préfrences : sport<input type="checkbox" name="pref1" /> Musique<input
+          type="checkbox"
+          name="pref2"
+          checked="checked"
+        />
+        Dance<input type="checkbox" name="pref3" />
+      </p>
+
+      <p>
+        Boisson Préférée :<input
+          list="ChoixBoisson"
+          type="text"
+          name="Boisson"
+        />
+
+        <datalist id="ChoixBoisson">
+          <option value="Coca"></option>
+          <option value="Boga Lime"></option>
+          <option value="Boga Cidre"></option>
+          <option value="Pepsi"></option>
+        </datalist>
+      </p>
+
+      <p>
+        Code reservation :
+        <input
+          type="text"
+          name="code"
+          placeholder="A/B/C suivi de 5 chiffres"
+          pattern="[A-C][0-9]{5}"
+        />
+      </p>
+      <p>
+        Genre : <input name="genre" value="x" type="radio" checked="checked" />F
+        <input name="genre" value="y" type="radio" />M
+      </p>
+      <p>
+        Prioriété de votre demande :
+        <input name="prio" type="range" min="10" max="50" />
+      </p>
+      <p><input type="submit" value="Valider" /></p>
+    </form>
+  </body>
+</html>
